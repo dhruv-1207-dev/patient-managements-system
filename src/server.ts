@@ -9,11 +9,12 @@ import { Log } from "./helpers/logger"
 import { Routes } from "./routes";
 // import { DB } from "./database";
 import * as busboy from 'connect-busboy';
+import connectDB from './database';
 
 dotenv.config();
 
 // initialize database
-// DB.init();
+connectDB();
 
 export class App {
   protected app: express.Application;

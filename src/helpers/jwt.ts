@@ -4,7 +4,7 @@ export class Jwt {
   /*
   * getAuthToken
   */
-  public static getAuthToken(data: { userId: number; }) {
+  public static getAuthToken(data) {
     return jwt.sign(data, process.env.JWT_SECRET);
   }
 

@@ -1,6 +1,9 @@
 import * as express from 'express';
 import { Constants } from './config/constants';
-import { AdminRoute } from './modules/admin/adminRoute';
+import { AppointmentRoute } from './modules/appointment/appointmentRoute';
+import { DoctorRoute } from './modules/doctor/doctorRoute';
+import { PatientRoute } from './modules/patient/patientRoute';
+import { UserRoute } from './modules/user/userRoute';
 
 export class Routes {
   protected basePath: string;
@@ -24,10 +27,13 @@ export class Routes {
 
   public path() {
     const router = express.Router();
-    router.use("/admin", AdminRoute);
+    router.use('/users', UserRoute);
+    router.use('/doctors', DoctorRoute);
+    router.use('/patients', PatientRoute);
+    router.use('/appointment', AppointmentRoute);
     router.all('/*', (req, res) => {
       return res.status(Constants.NOT_FOUND_CODE).json({
-        error: "URL NOT FOUND",
+        error: 'URL NOT FOUND',
       });
     });
     return router;

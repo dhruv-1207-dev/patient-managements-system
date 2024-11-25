@@ -23,6 +23,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@types/mongoose": "^5.11.96",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
     "class-validator": "^0.12.1",
@@ -35,6 +36,7 @@
     "jm-ez-l10n": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "moment-timezone": "^0.5.46",
+    "mongoose": "^8.8.2",
     "morgan": "^1.10.0",
     "winston": "^3.17.0"
   }
