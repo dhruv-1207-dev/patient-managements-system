@@ -1,0 +1,43 @@
+{
+  "name": "patient-managements-system",
+  "version": "1.0.0",
+  "description": "a Patient Management System for Orthodontists that helps in managing patient records, appointments, and consultations efficiently. The system facilitates interactions between patients, doctors, and administrative staff, ensuring secure and organized handling of sensitive medical information.",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "start": "tsc --watch & nodemon --inspect dist",
+    "build": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
+    "build-dev": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
+    "build-stage": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
+    "build-prod": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
+    "env": "sync-dotenv --sample env.sample"
+  },
+  "keywords": [],
+  "author": "Dhruv Parmar",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "helmet": "^3.22.0",
+    "sync-dotenv": "^2.7.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/mongoose": "^5.11.96",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "class-validator": "^0.12.1",
+    "connect-busboy": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "enum": "^3.0.4",
+    "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^8.0.0",
+    "jm-ez-l10n": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.46",
+    "mongoose": "^8.8.2",
+    "morgan": "^1.10.0",
+    "winston": "^3.17.0"
+  }
+}
