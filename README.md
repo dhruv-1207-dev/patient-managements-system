@@ -5,6 +5,8 @@
  # Dependency 
 - NPM version 10.8.3
 - Node version 18.20.4
+- MongoDb [DATABASE]
+- Postman [API_TESTING]
 
 # Install Node Modules
 - npm i
