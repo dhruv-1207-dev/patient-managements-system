@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "start": "tsc --watch & nodemon --inspect dist",
+    "start": "tsc --watch & node --inspect dist",
     "build": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
     "build-dev": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
     "build-stage": "tsc && mkdir -p uploads && mkdir -p dist/templates && cp -R src/templates/* dist/templates",
